@@ -1,0 +1,51 @@
+@Metadata.layer: #CORE
+@UI: {
+   headerInfo: {
+     typeName: 'Order',
+     typeNamePlural: 'Orders',
+     title:          { value: 'Description'},
+     description:    { value: 'Description' }
+               }
+     }
+annotate entity ZC_ServiceOrder_9730
+    with 
+{
+@UI.facet: [ { id:            'Order',
+                    purpose:       #STANDARD,
+                    type:          #IDENTIFICATION_REFERENCE,
+                    label:         'Order',
+                    position:      10 }
+               ]
+
+    @UI: { lineItem:       [ { position: 10, importance: #HIGH } ],
+           identification: [ { position: 10, importance: #HIGH } ]
+         }
+    OrderId;
+    @UI: { lineItem:       [ { position: 20, importance: #HIGH } ],
+           identification: [ { position: 20, importance: #HIGH } ]
+         }
+Description;
+@UI: {     lineItem:       [ { position: 30, importance: #HIGH } ],
+           identification: [ { position: 30, importance: #HIGH } ]
+         }
+CustomerName;
+@UI: {     lineItem:       [ { position: 40, importance: #HIGH } ],
+           identification: [ { position: 40, importance: #HIGH } ]
+         }
+Priority;
+@UI: {     lineItem:       [ { position: 50, importance: #HIGH } ],
+           identification: [ { position: 50, importance: #HIGH } ]
+         }
+Status;
+@UI: {     lineItem:       [ { position: 60, importance: #HIGH } ],
+           identification: [ { position: 60, importance: #MEDIUM } ]
+         }
+FullName;
+@UI: {     lineItem:       [ { position: 70, importance: #HIGH } ],
+           identification: [ { position: 70, importance: #MEDIUM } ]
+         }
+ResolutionDueAt;
+
+
+    
+}
